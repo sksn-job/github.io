@@ -1,0 +1,121 @@
+@use "variables" as v;
+@use "mixins" as m;
+
+#works {
+  margin-top: 2rem;
+  text-align: center;
+
+  .swiper {
+    padding-bottom: 3rem;
+
+    .swiper-wrapper {
+      .swiper-slide {
+        a {
+          display: block;
+          cursor: pointer;
+          text-decoration: none;
+          color: initial;
+        }
+        .works-card {
+          width: 100%;
+          max-width: 60rem;
+          margin: 0 auto;
+          background-color: rgba(v.$card-color, 0.3);
+          padding: 2rem 3.7rem;
+          border-radius: 15px;
+
+          .thumb {
+            width: 100%;
+            height: auto;
+            display: block;
+          }
+
+          .site-title {
+            font-weight: bolder;
+            padding: 1.5rem 0;
+          }
+          .works-text {
+            text-align: left;
+          }
+        }
+      }
+    }
+    .swiper-controls {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1.5rem;
+
+      .swiper-pagination {
+        position: static;
+        width: auto;
+      }
+
+      .swiper-pagination-bullet {
+        vertical-align: middle;
+        width: 0.5rem;
+        height: 0.5rem;
+        background-color: v.$color-accent;
+        opacity: 0.4;
+        transition: all 0.3s ease;
+
+        &.swiper-pagination-bullet-active {
+          width: 0.8rem; // アクティブだけ大きく
+          height: 0.8rem;
+          opacity: 1;
+        }
+      }
+    }
+    .swiper-button-prev,
+    .swiper-button-next {
+      position: static;
+      margin: 0;
+      width: auto;
+      height: auto;
+
+      --swiper-navigation-size: 0px;
+      font-size: 0;
+
+      svg {
+        display: block;
+      }
+    }
+  }
+
+  @include m.tab {
+    .works-card {
+      display: flex;
+      align-items: center;
+
+      img {
+        width: 40% !important;
+        height: auto !important;
+      }
+      .works-card-text {
+        width: 60%;
+        padding: 0 0 2rem 3rem;
+      }
+    }
+  }
+  @include m.pc {
+    .swiper {
+      .swiper-wrapper {
+        .swiper-slide {
+          .works-card {
+            transition:
+              transform 0.3s ease,
+              box-shadow 0.3s ease;
+            max-width: none;
+            padding: 8rem 3rem;
+
+            &:hover {
+              transform: translateY(-8px);
+              box-shadow: 0 10px 20px rgba(v.$card-color, 0.2);
+            }
+          }
+        }
+      }
+    }
+  }
+}

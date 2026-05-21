@@ -1,0 +1,119 @@
+@use "variables" as v;
+@use "mixins" as m;
+
+header {
+  background: linear-gradient(
+    to right,
+    rgba(247, 248, 248, 0.5) 0%,
+    rgba(247, 248, 248, 0.5) 53%,
+    rgba(255, 255, 255, 0.5) 100%
+  );
+  width: 100svw;
+  height: 5rem;
+  position: fixed;
+  // opacity: 1;
+  // isolation: isolate;
+  z-index: 100;
+  top: 0;
+  left: 0;
+
+  ul {
+    display: flex;
+    justify-content: flex-end;
+    padding: 2rem 0;
+    width: 100%;
+
+    li {
+      padding: 0 1.5rem;
+      font-size: v.$fs-normal;
+      line-height: 0.5;
+    }
+  }
+}
+.hero {
+  position: relative;
+  padding-bottom: 48vh;
+  .hero-left-bg {
+    width: 100%;
+    height: 50vh;
+    background: url(../img/bg-top.png);
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: 90%;
+  }
+
+  .catch-wrapp {
+    text-align: center;
+    padding: 8rem 0;
+
+    .catch {
+      font-size: v.$fs-large;
+      display: inline-block;
+      text-align: left;
+      font-weight: 500;
+    }
+  }
+  .hero-right-bg {
+    position: absolute;
+    background-image: url(../img/bg-right-1.png);
+    background-position: right center;
+    width: 100%;
+    height: 48vh;
+    background-repeat: no-repeat;
+    background-size: 80%;
+    right: 0;
+    bottom: 0;
+  }
+
+  @include m.tab {
+    .hero-left-bg {
+      height: 35vh;
+      background-size: 43%;
+    }
+    .hero-right-bg {
+      height: 40vh;
+      background-size: 48%;
+    }
+  }
+  @include m.pc {
+    .hero-left-bg {
+      background-size: 28%;
+    }
+    .hero-right-bg {
+      display: none;
+    }
+  }
+  .catch-wrapp {
+    padding: 2rem;
+    .catch {
+      font-size: 4rem;
+    }
+  }
+}
+
+@include m.pc {
+  header {
+    li {
+      a {
+        display: inline-block;
+        position: relative;
+        &::after {
+          content: "";
+          position: absolute;
+          left: 50%;
+          bottom: 0;
+          width: 60%;
+          height: 3px;
+          opacity: 0;
+          background-color: rgba(v.$fc-accent, 0.5);
+          transform: translate(-50%, 0);
+          transition: all 0.3s ease-in-out;
+        }
+        &:hover::after {
+          width: 100%;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

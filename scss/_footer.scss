@@ -1,0 +1,13 @@
+@use "variables" as v;
+@use "mixins" as m;
+
+#footer {
+  width: 100%;
+  height: auto;
+
+  p {
+    margin: 8rem 0 1rem 0;
+    font-size: 0.8rem;
+    text-align: center;
+  }
+}

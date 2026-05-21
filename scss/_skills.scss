@@ -1,0 +1,32 @@
+@use "variables" as v;
+@use "mixins" as m;
+
+#skills {
+  position: relative;
+  // overflow-x: hidden;
+
+  .bg-skills {
+    position: absolute;
+    z-index: -1;
+    bottom: -10rem;
+    right: -3rem;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/bg-right-2.png);
+    background-position: top right;
+    background-size: 70%;
+  }
+  @include m.tab {
+    .bg-skills {
+      // width: 100%;
+      // height: 100%;
+      background-size: 45%;
+      background-position: top right;
+    }
+  }
+  @include m.pc {
+    .bg-skills {
+      display: none;
+    }
+  }
+}

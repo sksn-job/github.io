@@ -1,0 +1,62 @@
+@use "variables" as v;
+@use "mixins" as m;
+
+.pc-right {
+  display: none;
+}
+@include m.pc {
+  .pc-layout {
+    display: grid;
+    grid-template-columns: 1fr 40rem;
+  }
+
+  .pc-left {
+    min-width: 0;
+  }
+
+  .pc-right {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .pc-right-bg {
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      width: 40vw;
+      height: 100vh;
+      background-image: url(../img/pc-bg.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: right bottom;
+      z-index: -1;
+    }
+    .pc-side-title {
+      position: fixed;
+      top: 50%;
+      right: 5rem;
+      font-size: 5rem;
+      font-weight: bold;
+      color: rgba(v.$fc-accent, 0.2);
+      transform: translateY(-50%);
+      transition: opacity 0.6s ease;
+
+      .side-title {
+        position: absolute;
+        top: 50%;
+        right: 10rem;
+        opacity: 0;
+        transition: opacity 0.6s ease;
+        rotate: 90deg;
+        white-space: nowrap;
+
+        &.is-active {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

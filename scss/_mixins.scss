@@ -1,0 +1,31 @@
+@use "variables" as v;
+
+// レスポンシブ（柔軟）
+@mixin mq($minWidth) {
+  @media (min-width: $minWidth) {
+    @content;
+  }
+}
+
+// レスポンシブ（固定）
+
+// タブレット以上
+@mixin tab {
+  @media (min-width: v.$bp-tab) {
+    @content;
+  }
+}
+
+// PC以上
+@mixin pc {
+  @media (min-width: v.$bp-pc) {
+    @content;
+  }
+}
+
+// ワイド以上
+@mixin wide {
+  @media (min-width: v.$bp-wide) {
+    @content;
+  }
+}

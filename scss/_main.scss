@@ -1,0 +1,52 @@
+@use "variables" as v;
+@use "mixins" as m;
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Zen Kaku Gothic", sans-serif;
+  color: v.$fc-normal;
+  font-size: v.$fs-normal;
+  overflow-x: hidden;
+}
+a {
+  color: v.$fc-normal;
+  text-decoration: none;
+  cursor: pointer;
+}
+li {
+  list-style: none;
+}
+.wrapper {
+  padding: 0 1.6rem;
+
+  @include m.tab {
+    padding: 2.8rem;
+  }
+  @include m.pc {
+    padding: 5rem;
+  }
+}
+
+.sec-title {
+  color: v.$fc-accent;
+  font-weight: bold;
+  font-size: v.$fs-large;
+  padding-bottom: 2rem;
+  text-align: left;
+
+  @include m.pc {
+    font-size: 4rem;
+    padding-bottom: 4rem;
+  }
+}
+
+

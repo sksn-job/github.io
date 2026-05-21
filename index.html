@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- スマホでの電話番号自動リンク防止（必要に応じて） -->
+    <meta name="format-detection" content="telephone=no" />
+
+    <!-- ページ基本情報（必ず案件ごとに変更） -->
+    <title>イノウエ　サワコ | Portfolio Site</title>
+    <meta name="description" content="ページの説明文" />
+
+    <!-- 正規URL（SEO対策） -->
+    <link rel="canonical" href="https://example.com/" />
+    <!-- 
+    同一内容ページが複数URLで存在する場合に使用
+    → Googleに「このURLが正規です」と伝える
+  -->
+
+    <!-- 検索エンジン制御 -->
+    <!-- 本番公開 → index / 開発中 → noindex -->
+    <!-- <meta name="robots" content="noindex,nofollow"> -->
+
+    <!-- OGP（SNSシェア用） -->
+    <!-- <meta property="og:site_name" content="サイト名" /> -->
+    <meta property="og:title" content="ページタイトル" />
+    <meta property="og:description" content="ページの説明文" />
+    <!-- <meta property="og:type" content="website" /> -->
+    <meta property="og:url" content="https://example.com/" />
+    <meta property="og:image" content="https://example.com/img/og_img.jpg" />
+    <!-- 推奨サイズ：1200x630 -->
+    <!-- <meta property="og:image:alt" content="OG画像の説明" />
+    <meta property="og:locale" content="ja_JP" /> -->
+
+    <!-- X（旧Twitter）カード -->
+    <!-- 
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@your_account" />
+  <meta name="twitter:title" content="ページタイトル" />
+  <meta name="twitter:description" content="ページの説明文" />
+  <meta name="twitter:image" content="https://example.com/img/og_img.jpg" />
+  -->
+
+    <!-- アイコン関連（favicon） -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/img/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/img/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/img/favicon-16x16.png"
+    />
+
+    <!-- フォント最適化（Google Fonts使う場合） -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New&family=Zen+Maru+Gothic&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSSリセット -->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+
+    <!-- メインCSS -->
+    <!-- 共通CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- アニメーション系（必要な場合） -->
+    <!-- <link rel="stylesheet" href="/css/animate.css" /> -->
+
+    <!-- ライブラリ系（必要なものだけON） -->
+
+    <!-- Swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- 自作JS（モジュール） -->
+    <script type="module" src="js/main.js"></script>
+
+    <!-- 重要画像の先読み（LCP改善） -->
+    <!-- <link rel="preload" as="image" href="/img/hero.jpg" /> -->
+
+    <!-- 構造化データ（必要に応じて編集） -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "サイト名",
+        "url": "https://example.com/"
+      }
+    </script>
+
+    <!-- アクセシビリティ -->
+    <!-- htmlタグに lang="ja" を設定する -->
+    <!-- 例: <html lang="ja"> -->
+
+    <!-- 開発メモ -->
+    <!-- 
+    ・analytics（導入時はGDPR等に注意）
+    ・hreflang（多言語サイト）
+    ・フォント/画像のpreload最適化（LCP改善）
+  --></head>
+
+  <body>
+    <header>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#works">Works</a></li>
+        <li><a href="#skills">Skills</a></li>
+      </ul>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="hero-left-bg"></div>
+        <div class="catch-wrapp">
+          <h1 class="catch">伝わる設計と<br />心地よい動きを</h1>
+        </div>
+        <div class="hero-right-bg"></div>
+      </section>
+      <div class="pc-layout">
+        <div class="pc-left">
+          <section id="about">
+            <div class="wrapper">
+              <h2 class="sec-title">About</h2>
+              <div class="about-flex">
+                <div class="about-wrapp">
+                  <div
+                    class="about-img"
+                    role="img"
+                    aria-label="プロフィール画像"
+                  ></div>
+                  <p class="about-name">イノウエ　サワコ</p>
+                </div>
+                <div class="text-wrapp">
+                  <p class="about-text">
+                    フロントエンドを中心に Web制作を行っています。
+                  </p>
+
+                  <p class="about-text">
+                    ユーザーにとって分かりやすく、 心地よく伝わる構成を意識した
+                    設計と実装を大切にしています。
+                  </p>
+
+                  <p class="about-text">
+                    見た目だけでなく、 触れたときの心地よさや 動きまで含めた
+                    手触りのあるWeb制作。
+                  </p>
+
+                  <p class="about-text">
+                    鹿児島を拠点に活動し、 全国からのご相談にも
+                    柔軟に対応しています。
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="bg-about"></div>
+          </section>
+          <section id="works">
+            <div class="wrapper">
+              <h2 class="sec-title">Works</h2>
+              <div class="swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <a
+                      href="https://mayuib1211-ui.github.io/pronavi-deploy/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <div class="works-card">
+                        <img
+                          class="thumb"
+                          src="img/thumb-pronavi.webp"
+                          alt="pronavi-thumb"
+                        />
+                        <div class="works-card-text">
+                          <h3 class="site-title">Pronavi</h3>
+                          <p class="works-text">
+                            安心感のある構成を意識したプログラミングスクールのサイト。
+                            メインページのコーディングを担当し、実装を踏まえた見せ方の調整にも携わりました。
+                          </p>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a
+                      href="https://stylosalon.shop/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <div class="works-card">
+                        <img
+                          class="thumb"
+                          src="img/thumb-stylo.webp"
+                          alt="stylo-thumb"
+                        />
+                        <div class="works-card-text">
+                          <h3 class="site-title">Stylo.</h3>
+                          <p class="works-text">
+                            清潔感のあるトーンで構成した
+                            美容室サイト。デザインから実装まで一貫して担当し、SVGとGSAPで視線誘導を設計
+                            構造を意識して組み上げました。
+                          </p>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="swiper-controls">
+                  <div class="swiper-button-prev">
+                    <svg
+                      width="15"
+                      height="8"
+                      viewBox="0 0 15 8"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      style="transform: scaleX(-1)"
+                    >
+                      <path
+                        d="M15 4C15 6.20914 7.58445 8 4.88599 8C2.18753 8 0 6.20914 0 4C0 1.79086 2.18753 0 4.88599 0C7.58445 0 15 1.79086 15 4Z"
+                        fill="#B0AD84"
+                        fill-opacity="0.6"
+                      />
+                    </svg>
+                  </div>
+                  <div class="swiper-pagination"></div>
+                  <div class="swiper-button-next">
+                    <svg
+                      width="15"
+                      height="8"
+                      viewBox="0 0 15 8"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M15 4C15 6.20914 7.58445 8 4.88599 8C2.18753 8 0 6.20914 0 4C0 1.79086 2.18753 0 4.88599 0C7.58445 0 15 1.79086 15 4Z"
+                        fill="#B0AD84"
+                        fill-opacity="0.6"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section id="skills">
+            <div class="wrapper">
+              <h2 class="sec-title">Skills</h2>
+              <ul class="skills-list">
+                <li>HTML / CSS / SCSS</li>
+                <li>JavaScript / jQuery</li>
+                <li>（UI実装・モジュール設計・状態管理）</li>
+                <li>WordPress / ACF</li>
+                <li>Figma / STUDIO</li>
+                <li>Git / Version管理</li>
+                <li>サーバーアップ / ドメイン運用</li>
+              </ul>
+            </div>
+            <div class="bg-skills"></div>
+          </section>
+        </div>
+        <div class="pc-right">
+          <div class="pc-right-bg"></div>
+          <ul class="pc-side-title">
+            <li class="side-title">About</li>
+            <li class="side-title">Works</li>
+            <li class="side-title">Skills</li>
+          </ul>
+        </div>
+      </div>
+    </main>
+    <footer id="footer">
+      <p>
+        ©︎2026 Sawako Inoue<br />
+        Thank you for visiting.
+      </p>
+    </footer>
+  </body>
+</html>
